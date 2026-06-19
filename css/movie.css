@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1. body 설정을 세로 배치(column)로 변경 */
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;    /* 👈 요소를 가로가 아닌 세로로 쌓이게 변경 */
+  justify-content: flex-start; /* 👈 카드가 많아질 때를 대비해 상단부터 정렬 */
+  align-items: center;    
+  min-height: 100vh;
+  font-family: sans-serif;
+  padding: 40px 20px;        /* 👈 위아래 카드 간격 및 모바일 여백 확보 */
+  gap: 30px;                 /* 👈 카드와 카드 사이의 세로 간격 */
+}
+
+/* 2. 각 카드 내부 레이아웃 (Grid 형태) */
+.card-container {
+  display: grid;
+  grid-template-columns: 280px 2fr 1fr; 
+  align-items: center;    
+  gap: 40px;              
+  width: 100%;
+  max-width: 1100px;      
+  border: 1px solid #ccc;
+  border-radius: 40px; 
+  padding: 35px;
+  background-color: #fff;
+  margin: 0 auto; 
+}
+
+/* [1번째 열] 왼쪽 포스터 박스 */
+.poster-box {
+  width: 100%;             
+  height: 500px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.poster-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* [2번째 열] 중앙 줄거리 영역 */
+.synopsis-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #111;
+}
+
+.description {
+    
+  overflow: auto;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* [3번째 열] 우측 평점 영역 */
+.side-content {
+    margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;          
+  border-left: 1px solid #eee; 
+}
+
+.side-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+}
+
+.side-text-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .poster-box {
+    max-width: 350px;         
+    height: 450px;
+    margin: 0 auto;           
+  }
+
+  .side-content {
+    padding-left: 0;
+    padding-top: 20px;
+    border-left: none;        
+    border-top: 1px solid #eee; 
+  }
+}
