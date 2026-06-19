@@ -1,0 +1,111 @@
+/* 헤더 전체 스타일 */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed; /* 상단 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+}
+
+/* 헤더 내부 컨테이너 (정렬 및 폭 제한) */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 20px;
+}
+
+/* 로고 스타일 */
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1c1c1c;
+    letter-spacing: -1px;
+}
+
+.logo-w {
+    color: #ff2f6e; /* 왓챠 핑크 */
+}
+
+/* 탐색 메뉴 스타일 (중앙) */
+.nav-menu ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-size: 16px;
+    color: #505050;
+    font-weight: 500;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #ff2f6e;
+}
+
+/* 우측 섹션 스타일 (검색 및 사용자) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 검색 바 스타일 */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 0 12px;
+    width: 260px;
+    height: 38px;
+}
+
+.search-icon {
+    color: #b0b0b0;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.search-bar input {
+    font-size: 14px;
+    color: #1c1c1c;
+    width: 100%;
+}
+
+.search-bar input::placeholder {
+    color: #b0b0b0;
+}
+
+/* 사용자 메뉴 스타일 */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-btn {
+    font-size: 15px;
+    color: #505050;
+}
+
+.signup-btn {
+    font-size: 14px;
+    color: #ff2f6e;
+    border: 1px solid #ff2f6e;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.signup-btn:hover {
+    background-color: #fff1f6;
+}

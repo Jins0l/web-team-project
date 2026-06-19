@@ -1,0 +1,38 @@
+/* 기본 여백 및 박스 사이징 초기화 */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: #f8f8f8;
+    color: #1c1c1c;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 링크 스타일 초기화 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 리스트 스타일 초기화 */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 입력창 스타일 초기화 */
+input, button, textarea, select {
+    font-family: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+button {
+    cursor: pointer;
+}
