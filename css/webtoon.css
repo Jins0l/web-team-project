@@ -1,0 +1,104 @@
+/* 메인 컨테이너 */
+.webtoon-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 각 플랫폼 섹션 */
+.webtoon-section {
+    margin-bottom: 40px;
+}
+
+/* 섹션 제목 (네이버, 카카오 등) */
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 100px;
+    color: #0c0b0b; /* 가독성을 위한 기본 흰색 설정 */
+}
+
+/* 웹툰 카드들을 가로로 나열하는 컨테이너 */
+.webtoon-list {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto; /* 화면을 넘어가면 가로 스크롤 활성화 */
+    padding-bottom: 10px;
+}
+
+/* 가로 스크롤바 커스텀 스타일 (선택 사항) */
+.webtoon-list::-webkit-scrollbar {
+    height: 6px;
+}
+.webtoon-list::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+/* 개별 웹툰 카드 (이미지 + 랭킹 + 텍스트 전체 상자) */
+.webtoon-card {
+    position: relative;
+    flex: 0 0 calc(25% - 12px); /* 한 줄에 4개씩 균등 배치 */
+    min-width: 200px; /* 화면이 작아져도 최소 크기 유지 */
+    background-color: #1f2024;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+/* 마우스를 올렸을 때 살짝 위로 올라오는 효과 */
+.webtoon-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 웹툰 이미지 */
+.webtoon-thumbnail {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 좌측 상단 순위 숫자 뱃지 */
+.webtoon-rank {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+/* 텍스트(제목, 작가) 감싸는 영역 */
+.webtoon-info {
+    padding: 12px;
+}
+
+/* 웹툰 제목 */
+.webtoon-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 글자가 길어지면 ... 처리 */
+}
+
+/* 웹툰 작가 */
+.webtoon-author {
+    font-size: 0.85rem;
+    margin: 0;
+    color: #a0a0a0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 글자가 길어지면 ... 처리 */
+}
