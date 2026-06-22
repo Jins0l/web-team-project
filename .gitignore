@@ -17,7 +17,7 @@ yarn-error.log*
 dist/
 build/
 out/
-.env가
+.env
 .env.local
 logs
 *.log
